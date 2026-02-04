@@ -17,15 +17,4 @@ function divide(a, b) {
   return a / b;
 }
 
-// ✅ Average (গড়) function
-function average(a, b) {
-  return (a + b) / 2;
-}
-
-module.exports = { 
-  add, 
-  subtract, 
-  multiply, 
-  divide, 
-  average 
-};
+module.exports = { add, subtract, multiply, divide };
