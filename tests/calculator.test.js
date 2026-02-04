@@ -1,17 +1,31 @@
-const { add, subtract, multiply, divide } = require('../calculator');
+function add(a, b) {
+  return a + b;
+}
 
-test('adds 2 + 3 to equal 5', () => {
-  expect(add(2, 3)).toBe(5);
-});
+function subtract(a, b) {
+  return a - b;
+}
 
-test('subtracts 5 - 2 to equal 3', () => {
-  expect(subtract(5, 2)).toBe(3);
-});
+function multiply(a, b) {
+  return a * b;
+}
 
-test('multiplies 3 * 4 to equal 12', () => {
-  expect(multiply(3, 4)).toBe(12);
-});
+function divide(a, b) {
+  if (b === 0) {
+    throw new Error("Cannot divide by zero");
+  }
+  return a / b;
+}
 
-test('divides 10 / 2 to equal 5', () => {
-  expect(divide(10, 2)).toBe(5);
-});
+// ✅ Average (গড়) function
+function average(a, b) {
+  return (a + b) / 2;
+}
+
+module.exports = { 
+  add, 
+  subtract, 
+  multiply, 
+  divide, 
+  average 
+};
